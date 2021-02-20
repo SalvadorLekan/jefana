@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::placeholder {
+  color: white;
+}
+
+:focus {
+  outline: none;
+  border-bottom: 2px inset #2e1a00 !important;
+}
+.nav-salv button {
+  background-color: inherit;
+  padding: 1ch 2ch;
+  border: none;
+  cursor: pointer;
+}
+body {
+  min-height: 100vh;
+  background-color: #febd6d;
+  color: white;
+}
+
+.nav-salv {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2ch 0;
+}
+.nav-logo {
+  padding: 1ch;
+}
+
+.nav-center {
+  padding-block-start: calc(1rem + 3vmin);
+  flex-basis: 70%;
+  text-align: center;
+}
+.nav-center-owner {
+  font-weight: bolder;
+  padding: 1ch;
+  text-transform: uppercase;
+}
+
+.hide-sm {
+  display: none;
+}
+.show-sm {
+  display: unset;
+}
+@media only screen and (min-width: 576px) {
+  .hide-sm {
+    display: unset;
+  }
+  .show-sm {
+    display: none;
+  }
+}
+
+input[type="search"] {
+  padding: 1.5ch;
+  border: none !important;
+  background-color: transparent;
+  flex: 1;
+}
+
+.search-bar {
+  background-color: #2e1a0050;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  padding: 1ch;
+  margin: 2ch 0;
+  border: 3px inset transparent;
+}
+.search-bar:focus-within {
+  border-color: #2e1a0050;
+}
+
+/* <div class="shop-card">
+          <div class="card-img"></div>
+          <div class="card-details">
+            <div class="flex">
+              <div class="item-name"></div>
+              <div class="item-price">
+                <span class="currency"></span><span class="price"></span>
+              </div>
+              <div class="add-to-cart"></div>
+            </div>
+          </div>
+        </div> */
+.shop-card > div {
+  height: 20rem;
+  background: #2e1a0050;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+.shop-card .card-details {
+  background-color: white;
+}
+.shop-card .card-img {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-card img {
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
+  text-align: center;
+}
